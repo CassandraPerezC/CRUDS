@@ -29,12 +29,12 @@ function agregar(){
       swalWithBootstrapButtons.fire(
         'Cancelado'
       )
-      window.location.replace('../../'); 
+      window.location.replace('../'); 
     }
   
   })}
   
-  function editar(){
+  function editar(nombre){
 
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -46,6 +46,7 @@ function agregar(){
     
     swalWithBootstrapButtons.fire({
       title: '¿Esta seguro de modificar?',
+      text:'No se podra recuperar el registro',
       type: 'success',
       showCancelButton: true,
       confirmButtonText : 'Si',
@@ -86,7 +87,8 @@ function agregar(){
   })
   
   swalWithBootstrapButtons.fire({
-    title: '¿Esta seguro?'+'id',
+    title: '¿Esta seguro de eliminar al no.' +id +'?',
+    text:'No se podra recuperar el registro',
     type: 'warning',
     showCancelButton: true,
     confirmButtonText : 'Si',
@@ -106,6 +108,7 @@ function agregar(){
     ) {
       swalWithBootstrapButtons.fire(
         'Cancelado',
+        '',
         'error'
       )
     }

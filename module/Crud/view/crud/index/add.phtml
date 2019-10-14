@@ -1,0 +1,42 @@
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<?php
+	$title = 'Agregar nuevo Usuario';
+	$this->headTitle($title);
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?> </h1>
+
+<?php
+	$form->setAttribute('action',$this->url('crud',['action' => 'add']));
+	$form->prepare();	
+?>
+
+<?php
+	echo $this->form()->openTag($form);
+	echo $this->formHidden($form->get('id'));
+?>
+<br>
+
+<?php
+	echo $this->formRow($form->get('nombre'));
+?>
+<br>
+
+<?php
+	echo $this->formRow($form->get('apPat'));
+?>
+<br>
+
+<?php
+	echo $this->formRow($form->get('apMat'));
+?>
+<br>
+<?php
+echo $this->form()->closeTag(); 
+?>
+
+<?php
+ echo "<button  class='btn btn-primary' onclick='agregar()'>Aceptar</button>";
+?>

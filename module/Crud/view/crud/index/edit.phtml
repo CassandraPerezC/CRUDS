@@ -1,0 +1,35 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+<?php
+	$title = 'Editar Usuario';
+	$this->headTitle($title);
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?> </h1>
+
+<?php
+	echo $this->form()->openTag($form);
+	echo $this->formHidden($form->get('id'));
+?>
+<br>
+<?php
+	echo $this->formRow($form->get('nombre'));
+?>
+<br>
+<?php
+	echo $this->formRow($form->get('apPat'));
+?>
+<br>
+<?php
+	echo $this->formRow($form->get('apMat'));
+
+    ?>
+<br>
+<?php
+		echo $this->form()->closeTag($form);
+?>
+
+
+<?php
+	echo 	"<button onclick='editar()' class='btn btn-primary'> Aceptar  </button>"
+?>

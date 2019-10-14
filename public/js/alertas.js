@@ -29,7 +29,7 @@ function agregar(){
       swalWithBootstrapButtons.fire(
         'Cancelado'
       )
-      location.href="CRUDZ/public/";
+      window.location.replace('../../'); 
     }
   
   })}
@@ -65,11 +65,14 @@ function agregar(){
         swalWithBootstrapButtons.fire(
           'Cancelado'
         )
-        location.href="CRUDZ/public/";
+        window.location.replace('../../'); 
+        
         
       }
     
     })}
+
+    
     
   
   function borrar(id){
@@ -83,7 +86,7 @@ function agregar(){
   })
   
   swalWithBootstrapButtons.fire({
-    title: '¿Esta seguro?',
+    title: '¿Esta seguro?'+'id',
     type: 'warning',
     showCancelButton: true,
     confirmButtonText : 'Si',
